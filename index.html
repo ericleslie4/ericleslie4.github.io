@@ -6,21 +6,98 @@
 
 body {
 	
-	background: url("media/combs.jpg"), #ebebeb;
+	background: #99e2ff;
     background-position: right bottom;
     background-repeat: no-repeat;
 	background-size: auto auto;
     
 }
 
-.circle {
-
+.circleLeft {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100px;
 	height: 100px;
 	background: url("media/wood.jpg");
 	background-repeat: repeat;
 	border-radius: 50%
+}
+.circleRight {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100px;
+	height: 100px;
+	background: url("media/wood.jpg");
+	background-repeat: repeat;
+	border-radius: 50%
+}
+.rectangle {
+	position: fixed;
+	top: 0;
+	left: 50;
+	width: calc(100vw - 100px);
+	height: 100px;
+	background: url("media/wood.jpg");
+	background-repeat: repeat;
+}
 
+.logo {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+.chainLeft {
+	position: fixed;
+	top: 100;
+	left: 125;
+	width: 50px;
+	height: 75px;
+	background: url("media/chain.png");
+	background-repeat: repeat-y;
+}
+
+.chainRight {
+	position: fixed;
+	top: 100;
+	right: 125;
+	width: 50px;
+	height: 75px;
+	background: url("media/chain.png");
+	background-repeat: repeat-y;
+}
+
+.board {
+	position: fixed;
+	top: 175;
+	left: 125;
+	width: calc(100vw - 250px);
+	height: calc(100vh - 200px);
+	background: url("media/wood.jpg");
+	background-repeat: repeat;
+}
+
+.paper {
+	position: fixed;
+	top: 200;
+	left: 150;
+	width: calc(100vw - 300px);
+	height: calc(100vh - 250px);
+	background: url("media/paper.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.combs {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 570px;
+	height: 535px;
+	background: url("media/combs.png");
 }
 
 </style>
@@ -29,11 +106,19 @@ body {
 
 <h1>
 
-<div class="circle"></div>
+<div class="circleLeft"></div>
+<div class="circleRight"></div>
+<div class="rectangle"></div>
+<div class="chainLeft"></div>
+<div class="chainRight"></div>
 
-<font face="Arial Black" color="#efec23">
+<font class="logo" face="Arial Black" color="#efec23">
     Willowbrook Honey
 </font>
+
+<div class="combs"></div>
+<div class="board"></div>
+<div class="paper"></div>
 
 </h1>
 
