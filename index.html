@@ -4,91 +4,30 @@
 
 <style type="text/css">
 
-body {
-	
-	background: #99e2ff;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-	background-size: auto auto;
-    
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.circleLeft {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100px;
-	height: 100px;
-	background: url("media/wood.jpg");
-	background-repeat: repeat;
-	border-radius: 50%
-}
-.circleRight {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 100px;
-	height: 100px;
-	background: url("media/wood.jpg");
-	background-repeat: repeat;
-	border-radius: 50%
-}
-.rectangle {
-	position: fixed;
-	top: 0;
-	left: 50;
-	width: calc(100vw - 100px);
-	height: 100px;
-	background: url("media/wood.jpg");
-	background-repeat: repeat;
+body {
+	background: #fcfcfa;
 }
 
 .logo {
 	position: fixed;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, 0%);
+	top: 11;
+	left: 7;
+	transform: translate(0%, 0%);
 }
-
-.chainLeft {
+.logo2 {
 	position: fixed;
-	top: 100;
-	left: 125;
-	width: 50px;
-	height: 75px;
-	background: url("media/chain.png");
-	background-repeat: repeat-y;
-}
-
-.chainRight {
-	position: fixed;
-	top: 100;
-	right: 125;
-	width: 50px;
-	height: 75px;
-	background: url("media/chain.png");
-	background-repeat: repeat-y;
-}
-
-.board {
-	position: fixed;
-	top: 175;
-	left: 125;
-	width: calc(100vw - 250px);
-	height: calc(100vh - 200px);
-	background: url("media/wood.jpg");
-	background-repeat: repeat;
-}
-
-.paper {
-	position: fixed;
-	top: 200;
-	left: 150;
-	width: calc(100vw - 300px);
-	height: calc(100vh - 250px);
-	background: url("media/paper.png");
-	background-repeat: no-repeat;
-	background-size: cover;
+	top: 10;
+	left: 10;
+	transform: translate(0%, 0%);
 }
 
 .combs {
@@ -100,28 +39,53 @@ body {
 	background: url("media/combs.png");
 }
 
+.bar {
+	position: fixed;
+	top: 50;
+	left: 10;
+	width: calc(100vw - 20px);
+	height: 10px;
+	border-radius: 50%;
+	background: #e3e3e3;
+}
+
+.content {
+	position: fixed;
+	top: 80;
+	left: 25;
+	width: 70%;
+	height: calc(100vh - 100px);
+	background: rgba(250, 247, 247, 0.65);
+}
+
 </style>
 
 <body>
 
-<h1>
-
 <div class="combs"></div>
-<div class="circleLeft"></div>
-<div class="circleRight"></div>
-<div class="rectangle"></div>
-<div class="chainLeft"></div>
-<div class="chainRight"></div>
 
-<font class="logo" face="Arial Black" color="#efec23">
-    Willowbrook Honey
-</font>
-
-<div class="board"></div>
-<div class="paper"></div>
-
+<h1>
+<a href="index.html" onmouseover="highlight(true)" onmouseout="highlight(false)">
+<font class="logo unselectable" face="Arial Black" color="#e3e3e3"> Willowbrook Honey </font>
+<font id="logo" class="logo2" face="Arial Black" color="#ccbe27"> Willowbrook Honey </font>
+</a>
 </h1>
+
+<div class="bar"></div>
+
+<div class="content"></div>
 
 </body>
 
 </html>
+
+<script>
+function highlight(toggle){
+	var object = document.getElementById("logo");
+	if(toggle){
+		object.style.color = "#e6d630";
+	}else{
+		object.style.color = "#ccbe27";
+	}
+}
+</script>
