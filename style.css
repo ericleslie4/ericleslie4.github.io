@@ -1,0 +1,78 @@
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+	background: #545454;
+}
+
+.logo {
+	position: fixed;
+	top: 12;
+	left: 12;
+	font-size: 32px;
+	text-shadow: -3px 1px #87871e;
+	color: #ccbe27;
+}
+
+.combs {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 570px;
+	height: 535px;
+	background: url("media/combs.png");
+}
+
+.highlight:hover{
+	color: #e6d630;
+}
+
+.bar {
+	position: fixed;
+	top: 50;
+	left: 10;
+	width: calc(100vw - 20px);
+	height: 10px;
+	border-radius: 50%;
+	background: #3d3d3d;
+}
+
+.content {
+	position: fixed;
+	top: 80;
+	left: 25;
+	width: 70%;
+	height: calc(100vh - 100px);
+	background: rgba(115, 115, 115, 0.65);
+}
+
+.nav_button {
+	
+    border: none;
+    color: #ccbe27;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10%;
+    
+}
+
+nav {    
+	
+	position: relative;
+	top: 40;
+	right: 5%;
+    padding: 10px;
+    color: #ffffff;
+    align-content: center;
+    text-align: center;
+
+}

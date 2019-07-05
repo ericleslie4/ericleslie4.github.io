@@ -2,90 +2,26 @@
 
 <title> Willowbrook Honey </title>
 
-<style type="text/css">
-
-.unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-body {
-	background: #fcfcfa;
-}
-
-.logo {
-	position: fixed;
-	top: 11;
-	left: 7;
-	transform: translate(0%, 0%);
-}
-.logo2 {
-	position: fixed;
-	top: 10;
-	left: 10;
-	transform: translate(0%, 0%);
-}
-
-.combs {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	width: 570px;
-	height: 535px;
-	background: url("media/combs.png");
-}
-
-.bar {
-	position: fixed;
-	top: 50;
-	left: 10;
-	width: calc(100vw - 20px);
-	height: 10px;
-	border-radius: 50%;
-	background: #e3e3e3;
-}
-
-.content {
-	position: fixed;
-	top: 80;
-	left: 25;
-	width: 70%;
-	height: calc(100vh - 100px);
-	background: rgba(250, 247, 247, 0.65);
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
 
 <body>
 
 <div class="combs"></div>
+<div class="bar"></div>
+
+<nav>
+    <a class="nav_button highlight" href="index.html"> Home </a>
+    <a class="nav_button highlight" href="index.html"> Contact </a>
+	<a class="nav_button highlight" href="index.html"> Order </a>
 
 <h1>
-<a href="index.html" onmouseover="highlight(true)" onmouseout="highlight(false)">
-<font class="logo unselectable" face="Arial Black" color="#e3e3e3"> Willowbrook Honey </font>
-<font id="logo" class="logo2" face="Arial Black" color="#ccbe27"> Willowbrook Honey </font>
+<a href="index.html">
+<font id="logo" class="logo highlight" face="Arial Black"> Willowbrook Honey </font>
 </a>
 </h1>
-
-<div class="bar"></div>
 
 <div class="content"></div>
 
 </body>
 
 </html>
-
-<script>
-function highlight(toggle){
-	var object = document.getElementById("logo");
-	if(toggle){
-		object.style.color = "#e6d630";
-	}else{
-		object.style.color = "#ccbe27";
-	}
-}
-</script>
