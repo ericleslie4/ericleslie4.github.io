@@ -1,0 +1,62 @@
+<html>
+
+<title> Willowbrook Honey </title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+
+<div class="combs"></div>
+<div class="bar"></div>
+
+<nav>
+    <a class="nav_button highlight" href="index.html"> Home </a>
+    <a class="nav_button highlight" href="index.html"> Inventory </a>
+	<a class="nav_button highlight" href="order.html"> Order </a>
+
+<h1>
+<a href="index.html">
+<font id="logo" class="logo highlight" face="Arial Black"> Willowbrook Honey </font>
+</a>
+</h1>
+
+<div class="content" align="left">
+<h2> <u> Order </u> </h2>
+
+<form>
+Name: <input type="text" id="name" required><br>
+Phone: <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4]" required><br>
+When:
+<div>
+<input type="radio" id="ASAP" checked name="when"><label for="ASAP">ASAP</label>
+<input type="radio" id="NextSeason" name="when"><label for="NextSeason">Next Season</label>
+</div>
+<font color="#ffc73b">
+1LB Bottle: <input type="number" id="1lb" value="0" min="0"><br>
+1/2LB Bottle: <input type="number" id="halflb" value="0" min="0"><br>
+Whipped Honey: <input type="number" id="whipped" value="0" min="0"><br>
+</font>
+Extra Information:<br> <textarea rows="8" cols="75" id="extraInfo"></textarea><br><br>
+<input type="button" value="Send" name="send" onClick="sendEmail()">
+
+</form>
+
+</div>
+
+</body>
+
+</html>
+
+<script>
+
+function sendEmail(){
+	var email = "landon.ellis2@gmail.com";
+	var subj = "Willowbrook Honey Order";
+	var body = "Name: " + document.getElementById("name").value + "\nPhone: " + document.getElementById("phone").value;
+	body += "\nWhen: " + (document.getElementById("ASAP").checked ? "ASAP" : "Next Season");
+	body += "\nExtra Information: " + document.getElementById("extraInfo").value;
+	body = encodeURIComponent(body);
+	document.location = "mailto:"+email+"?subject="+subj+"&body="+body;
+}
+
+</script>

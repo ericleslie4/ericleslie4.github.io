@@ -11,6 +11,14 @@ body {
 	background: #545454;
 }
 
+textarea {
+	resize: none;
+}
+
+input[type=number]{
+    width: 50px;
+} 
+
 .logo {
 	position: fixed;
 	top: 12;
@@ -50,6 +58,8 @@ body {
 	width: 70%;
 	height: calc(100vh - 100px);
 	background: rgba(115, 115, 115, 0.65);
+	font-size: 20px;
+	color: #ffff00;
 }
 
 .nav_button {
