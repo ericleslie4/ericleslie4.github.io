@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <html>
 
 <title> Willowbrook Honey </title>
@@ -11,7 +12,7 @@
 
 <nav>
     <a class="nav_button highlight" href="index.html"> Home </a>
-    <a class="nav_button highlight" href="index.html"> Inventory </a>
+    <a class="nav_button highlight" href="inven.html"> Inventory </a>
 	<a class="nav_button highlight" href="order.html"> Order </a>
 
 <h1>
@@ -32,22 +33,45 @@ When:
 <input type="radio" id="NextSeason" name="when"><label for="NextSeason">Next Season</label>
 </div>
 <font color="#ffc73b">
-1LB Bottle: <input type="number" id="1lb" value="0" min="0"><br>
+<img src="media/gallon.png" alt="Gallon" style="width:20px;height:auto;">
+Gallon: <input type="number" id="gallon" value="0" min="0"><br>
+<img src="media/honey.png" alt="Honey" style="width:20px;height:auto;">
+1LB Bottle: <input type="number" id="1lb" value="0" min="0">
+<img src="media/honey.png" alt="Honey" style="width:20px;height:auto;">
 1/2LB Bottle: <input type="number" id="halflb" value="0" min="0"><br>
-Whipped Honey: <input type="number" id="whipped" value="0" min="0"><br>
+<img src="media/honeycomb.png" alt="Honey Comb" style="width:20px;height:auto;">
+Comb Honey: <input type="number" id="comb" value="0" min="0">
+<img src="media/cream.png" alt="Cream Honey" style="width:28px;height:auto;">
+Creamed Honey: <input type="number" id="creamed" value="0" min="0"><br>
 </font>
 Extra Information:<br> <textarea rows="8" cols="75" id="extraInfo"></textarea><br><br>
 <input type="button" value="Send" name="send" onClick="sendEmail()">
 
 </form>
 
+<div id="test">
+Test
 </div>
+
+</div>
+
+
 
 </body>
 
 </html>
 
 <script>
+
+$(document).ready(function() {
+	$.ajax({
+		url : "https://willowbrookhoney.com/media/test.txt",
+		dataType: "text",
+		success : function (data) {
+			$("#test").html(data);
+		}
+	});
+});
 
 function sendEmail(){
 	var email = "landon.ellis2@gmail.com";
