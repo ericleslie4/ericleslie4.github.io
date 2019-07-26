@@ -20,12 +20,26 @@
 </a>
 </h1>
 
-<div class="content" align="left">
+<div class="content" align="left" style="padding-left:40px;">
 <h2> <u> Inventory </u> </h2>
 
-<img src="media/honey.png" alt="Honey" style="width:100px;height:auto;">
-<img src="media/honeycomb.png" alt="Honey Comb" style="width:88px;height:auto;">
-<img src="media/cream.png" alt="Cream Honey" style="width:125px;height:auto;">
+<span style="display: inline-block;">
+<img src="media/honey.png" alt="Honey" style="width:100px;padding-right:40px;">
+<br> Honey Pound
+<br><i> (Stock: <span id="honey"></span>) </i>
+</span>
+
+<span style="display: inline-block;">
+<img src="media/honeycomb.png" alt="Honey Comb" style="width:88px;padding-right:40px;">
+<br> Comb Honey
+<br><i> (Stock: <span id="comb"></span>) </i>
+</span>
+
+<span style="display: inline-block;">
+<img src="media/cream.png" alt="Cream Honey" style="width:125px;padding-right:40px;">
+<br> Creamed Honey
+<br><i> (Stock: <span id="creamed"></span>) </i>
+</span>
 
 </div>
 
@@ -34,5 +48,26 @@
 </html>
 
 <script>
+
+var inven = [[0.0, 0], [0.0, 0], [0.0, 0], [0.0, 0], [0.0, 0]];
+
+$.ajax({
+    url: "https://www.willowbrookhoney.com/media/inventory.csv",
+    success: function (data) {
+		data = data.split("\n");
+		for (var i = 0; i < inven.length && i < data.length - 1; i++) {
+			var row = data[i+1].split(",");
+			inven[i][0] = parseFloat(row[1]);
+			inven[i][1] = parseInt(row[2]);
+		}
+		changeText(
+    },
+    dataType: "text",
+    });
+
+function changeText(id, text){
+	document.getElementById(id).innerHTML = text;
+}
+
 
 </script>
