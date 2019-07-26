@@ -34,24 +34,24 @@ When:
 </div>
 <font color="#ffc73b">
 <img src="media/gallon.png" alt="Gallon" style="width:20px;height:auto;">
-Gallon $<div id="gallonPrice"></div> :
+Gallon $<span id="gallonPrice"></span> :
 <input type="number" id="gallon" value="0" min="0" onchange="updateTotal()"><br>
 <img src="media/honey.png" alt="Honey" style="width:20px;height:auto;">
-1LB Bottle $<div id="1lbPrice"></div> :
+1LB Bottle $<span id="1lbPrice"></span> :
 <input type="number" id="1lb" value="0" min="0" onchange="updateTotal()">
 <img src="media/honey.png" alt="Honey" style="width:20px;height:auto;">
-1/2LB Bottle $<div id="halflbPrice"></div> :
+1/2LB Bottle $<span id="halflbPrice"></span> :
 <input type="number" id="halflb" value="0" min="0" onchange="updateTotal()"><br>
 <img src="media/honeycomb.png" alt="Honey Comb" style="width:20px;height:auto;">
-Comb Honey $<div id="combPrice"></div> :
+Comb Honey $<span id="combPrice"></span> :
 <input type="number" id="comb" value="0" min="0" onchange="updateTotal()">
 <img src="media/cream.png" alt="Cream Honey" style="width:28px;height:auto;">
-Creamed Honey $<div id="creamedPrice"></div> :
+Creamed Honey $<span id="creamedPrice"></span> :
 <input type="number" id="creamed" value="0" min="0" onchange="updateTotal()"><br>
 </font>
 Extra Information:<br> <textarea rows="8" cols="75" id="extraInfo"></textarea><br><br>
 
-Total Price: $<div id="price">0.00</div>
+Total Price: $<span id="price">0.00</span>
 
 <input type="button" value="Send" name="send" onClick="sendEmail()">
 
@@ -87,21 +87,21 @@ function changeText(id, text){
 }
 
 function updatePrices() {
-	changeText("gallonPrice", "" + inven[0][0] + "<i>(Stock: " + inven[0][1] + ")</i>");
-	changeText("1lbPrice", "" + inven[1][0] + "<i>(Stock: " + inven[1][1] + ")</i>");
-	changeText("halflbPrice", "" + inven[2][0] + "<i>(Stock: " + inven[2][1] + ")</i>");
-	changeText("combPrice", "" + inven[3][0] + "<i>(Stock: " + inven[3][1] + ")</i>");
-	changeText("creamedPrice", "" + inven[4][0] + "<i>(Stock: " + inven[4][1] + ")</i>");
+	changeText("gallonPrice", "" + inven[0][0].toFixed(2) + "<i>(Stock: " + inven[0][1] + ")</i>");
+	changeText("1lbPrice", "" + inven[1][0].toFixed(2) + "<i>(Stock: " + inven[1][1] + ")</i>");
+	changeText("halflbPrice", "" + inven[2][0].toFixed(2) + "<i>(Stock: " + inven[2][1] + ")</i>");
+	changeText("combPrice", "" + inven[3][0].toFixed(2) + "<i>(Stock: " + inven[3][1] + ")</i>");
+	changeText("creamedPrice", "" + inven[4][0].toFixed(2) + "<i>(Stock: " + inven[4][1] + ")</i>");
 }
 
 function updateTotal(){
 	var totalPrice = 0.0;
-	totalPrice += inven[0][0] * document.getElementById("gallon").value;
-	totalPrice += inven[1][0] * document.getElementById("1lb").value;
-	totalPrice += inven[2][0] * document.getElementById("halflb").value;
-	totalPrice += inven[3][0] * document.getElementById("comb").value;
-	totalPrice += inven[4][0] * document.getElementById("creamed").value;
-	changeText("price", "" + totalPrice);
+	totalPrice += (inven[0][0] * document.getElementById("gallon").value);
+	totalPrice += (inven[1][0] * document.getElementById("1lb").value);
+	totalPrice += (inven[2][0] * document.getElementById("halflb").value);
+	totalPrice += (inven[3][0] * document.getElementById("comb").value);
+	totalPrice += (inven[4][0] * document.getElementById("creamed").value);
+	changeText("price", "" + totalPrice.toFixed(2));
 }
 
 function sendEmail(){
