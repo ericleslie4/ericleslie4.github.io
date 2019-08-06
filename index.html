@@ -15,9 +15,9 @@
 </a>
 
 <span class="nav_bar" style="display:inline-block;">
-	<a class="nav_button highlight" href="index.html"> Home </a>
-	<a class="nav_button highlight" href="inven.html"> Inventory </a>
-	<a class="nav_button highlight" href="order.html"> Order </a>
+	<a class="nav_button highlight" href="inven.html"> Products </a>
+	<a class="nav_button highlight" href="order.html"> Shop </a>
+	<a class="nav_button highlight" href="gallery.html"> Gallery </a>
 </span>
 
 <div class="content" align="center">
@@ -40,7 +40,7 @@
 </div>
 
 <br>
-<div style="width:75%;margin-left:10px;padding-top:20px;padding-bottom:20px;">
+<div style="max-width:100%;width:600px;margin-left:10px;padding-top:20px;padding-bottom:20px;">
 Willowbrook Honey
 <span style="color:#dede02;">
 is a local family beekeeping business in Terre Haute, Indiana owned and operated by brothers Eric and Mark Ellis.
@@ -57,12 +57,13 @@ If you are interested in ordering or contacting, please visit the Order page.
 
 <script>
 
-run();
+onStart();
 
 var slideIndex = 1;
 showSlides(slideIndex);
+var interval = setInterval(continueSlides, 7000);
 
-function run() {
+function onStart() {
 	var dot_elem = document.getElementById("dot_elem");
 	var dots = "";
 	var slides = document.getElementsByClassName("mySlides");
@@ -72,8 +73,14 @@ function run() {
 	dot_elem.innerHTML = dots;
 }
 
+function continueSlides() {
+	plusSlides(1);
+}
+
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+	clearInterval(interval);
+	interval = setInterval(continueSlides, 7000);
+	showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {

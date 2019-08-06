@@ -15,22 +15,17 @@
 </a>
 
 <span class="nav_bar" style="display:inline-block;">
-	<a class="nav_button highlight" href="index.html"> Home </a>
-	<a class="nav_button highlight" href="inven.html"> Inventory </a>
-	<a class="nav_button highlight" href="order.html"> Order </a>
+	<a class="nav_button highlight" href="inven.html"> Products </a>
+	<a class="nav_button highlight" href="order.html"> Shop </a>
+	<a class="nav_button highlight" href="gallery.html"> Gallery </a>
 </span>
 
 <div class="content" align="left">
-<div class="header"> <u> Order </u> </div>
+<div class="header"> <u> Shop </u> </div>
 
 <form>
 Name: <input type="text" id="name" required><br>
 Phone: <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4]" required><br>
-When:
-<div>
-<input type="radio" id="ASAP" checked name="when"><label for="ASAP">ASAP</label>
-<input type="radio" id="NextSeason" name="when"><label for="NextSeason">Next Season</label>
-</div>
 <font color="#ffc73b">
 <img src="media/gallon.png" alt="Gallon" style="width:20px;height:auto;">
 Gallon $<span id="gallonPrice"></span> :
@@ -52,7 +47,7 @@ Extra Information:<br> <textarea rows="8" cols="75" id="extraInfo"></textarea><b
 
 Total Price: $<span id="price">0.00</span>
 
-<input type="button" value="Send" name="send" onClick="sendEmail()">
+<input type="button" value="Send" name="send" onClick="sendEmail()" style="width:90px;height:24px;font-size:20px;">
 
 </form>
 
