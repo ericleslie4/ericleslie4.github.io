@@ -17,14 +17,17 @@ textarea {
 
 input[type=number]{
     width: 50px;
-} 
+}
+
+a {
+	text-decoration: none;
+}
 
 .logo {
-	position: fixed;
-	top: 12;
-	left: 12;
-	font-size: 32px;
-	text-shadow: -3px 1px #87871e;
+	position: relative;
+	padding: 12;
+	font-size: 5vh;
+	text-shadow: -5px 3px #87871e;
 	color: #ccbe27;
 }
 
@@ -41,25 +44,35 @@ input[type=number]{
 	color: #e6d630;
 }
 
-.bar {
+.bar {	
 	position: fixed;
 	top: 50;
-	left: 10;
-	width: calc(100vw - 20px);
-	height: 10px;
+	left: 81vw;
+	width: 10px;
+	height: calc(100vh - 50px);
 	border-radius: 50%;
 	background: #3d3d3d;
 }
 
 .content {
-	position: fixed;
-	top: 80;
-	left: 25;
-	width: 70%;
-	height: calc(100vh - 100px);
+	position: relative;
+	width: 80vw;
+	min-height: calc(100vh - 150px);
 	background: rgba(115, 115, 115, 0.65);
-	font-size: 20px;
+	font-size: 2.3vh;
 	color: #ffff00;
+}
+
+.header {
+	
+    border: none;
+    color: #ffff00;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 3.5vh;
+    padding: 0.8vw;
+    
 }
 
 .nav_button {
@@ -69,20 +82,12 @@ input[type=number]{
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px;
-    padding: 5px;
-    margin-left: 10%;
+    font-size: 2.8vh;
+    padding-left: 5vw;
     
 }
 
-nav {    
-	
+.nav_bar {
 	position: relative;
-	top: 40;
-	right: 5%;
-    padding: 10px;
-    color: #ffffff;
-    align-content: center;
-    text-align: center;
-
+	margin-left: 3vw;
 }
