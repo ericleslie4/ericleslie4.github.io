@@ -56,8 +56,8 @@ a {
 
 .content {
 	position: relative;
+	min-width: 500px;
 	width: 80vw;
-	min-height: calc(100vh - 150px);
 	background: rgba(115, 115, 115, 0.65);
 	font-size: 2.3vh;
 	color: #ffff00;

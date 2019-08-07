@@ -13,8 +13,8 @@
 
 .slideshow-container {
 	height: 25vw;
-	max-width: 100%;
-	width:70vh;
+	max-width: 65%;
+	width:900px;
 	box-shadow:0 8px 16px 0 rgba(0,0,0,0.6), 0 12px 40px 0 rgba(0,0,0,0.19);
 	position: relative;
 	margin: auto;
@@ -66,9 +66,9 @@
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 0.7s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 0.7s;
 }
 
 @-webkit-keyframes fade {

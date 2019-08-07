@@ -4,6 +4,7 @@
 <title> Willowbrook Honey </title>
 
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="products.css">
 
 <body>
 
@@ -15,41 +16,68 @@
 </a>
 
 <span class="nav_bar" style="display:inline-block;">
-	<a class="nav_button highlight" href="inven.html"> Products </a>
-	<a class="nav_button highlight" href="order.html"> Shop </a>
-	<a class="nav_button highlight" href="gallery.html"> Gallery </a>
+	<a class="nav_button highlight" href="honey.html"> Honey </a>
+	<a class="nav_button highlight" href="bees.html"> Bees </a>
+	<a class="nav_button highlight" href="learn.html"> Learn </a>
 </span>
 
 <div class="content" align="left">
-<div class="header"> <u> Shop </u> </div>
 
-<form>
+<div class="header"> <u> Honey Products </u> </div>
+
+<span class="item">
+<img src="media/honey.png" alt="Honey" style="width:100px;">
+<br> Honey Pound
+<div class="desc">
+Information Information Information Information Information Information
+</div>
+1LB $<span id="1lbPrice"></span> :
+<input type="number" id="1lb" value="0" min="0" onchange="updateTotal()">
+<br>
+1/2LB $<span id="halflbPrice"></span> :
+<input type="number" id="halflb" value="0" min="0" onchange="updateTotal()"><br>
+</span>
+
+<span class="item">
+<img src="media/honeycomb.png" alt="Honey Comb" style="width:88px;">
+<br> Comb Honey
+<div class="desc">
+Information Information Information Information Information Information
+</div>
+$<span id="combPrice"></span> :
+<input type="number" id="comb" value="0" min="0" onchange="updateTotal()">
+</span>
+
+<span class="item">
+<img src="media/cream.png" alt="Cream Honey" style="width:125px;">
+<br> Creamed Honey
+<div class="desc">
+Information Information Information Information Information Information
+</div>
+$<span id="creamedPrice"></span> :
+<input type="number" id="creamed" value="0" min="0" onchange="updateTotal()">
+</span>
+
+<span class="item">
+<img src="media/gallon.png" alt="Honey Gallon" style="width:125px;">
+<br> Honey Gallon
+<div class="desc">
+Information Information Information Information Information Information
+</div>
+$<span id="gallonPrice"></span> :
+<input type="number" id="gallon" value="0" min="0" onchange="updateTotal()">
+</span>
+
+<span style="display:inline-block;vertical-align:middle;">
+
 Name: <input type="text" id="name" required><br>
 Phone: <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4]" required><br>
-<font color="#ffc73b">
-<img src="media/gallon.png" alt="Gallon" style="width:20px;height:auto;">
-Gallon $<span id="gallonPrice"></span> :
-<input type="number" id="gallon" value="0" min="0" onchange="updateTotal()"><br>
-<img src="media/honey.png" alt="Honey" style="width:20px;height:auto;">
-1LB Bottle $<span id="1lbPrice"></span> :
-<input type="number" id="1lb" value="0" min="0" onchange="updateTotal()">
-<img src="media/honey.png" alt="Honey" style="width:20px;height:auto;">
-1/2LB Bottle $<span id="halflbPrice"></span> :
-<input type="number" id="halflb" value="0" min="0" onchange="updateTotal()"><br>
-<img src="media/honeycomb.png" alt="Honey Comb" style="width:20px;height:auto;">
-Comb Honey $<span id="combPrice"></span> :
-<input type="number" id="comb" value="0" min="0" onchange="updateTotal()">
-<img src="media/cream.png" alt="Cream Honey" style="width:28px;height:auto;">
-Creamed Honey $<span id="creamedPrice"></span> :
-<input type="number" id="creamed" value="0" min="0" onchange="updateTotal()"><br>
-</font>
 Extra Information:<br> <textarea rows="8" cols="75" id="extraInfo"></textarea><br><br>
-
 Total Price: $<span id="price">0.00</span>
 
 <input type="button" value="Send" name="send" onClick="sendEmail()" style="width:90px;height:24px;font-size:20px;">
 
-</form>
+</span>
 
 </div>
 
@@ -81,11 +109,11 @@ function changeText(id, text){
 }
 
 function updatePrices() {
-	changeText("gallonPrice", "" + inven[0][0].toFixed(2) + "<i>(Stock: " + inven[0][1] + ")</i>");
-	changeText("1lbPrice", "" + inven[1][0].toFixed(2) + "<i>(Stock: " + inven[1][1] + ")</i>");
-	changeText("halflbPrice", "" + inven[2][0].toFixed(2) + "<i>(Stock: " + inven[2][1] + ")</i>");
-	changeText("combPrice", "" + inven[3][0].toFixed(2) + "<i>(Stock: " + inven[3][1] + ")</i>");
-	changeText("creamedPrice", "" + inven[4][0].toFixed(2) + "<i>(Stock: " + inven[4][1] + ")</i>");
+	changeText("gallonPrice", "" + inven[0][0].toFixed(2));
+	changeText("1lbPrice", "" + inven[1][0].toFixed(2));
+	changeText("halflbPrice", "" + inven[2][0].toFixed(2));
+	changeText("combPrice", "" + inven[3][0].toFixed(2));
+	changeText("creamedPrice", "" + inven[4][0].toFixed(2));
 }
 
 function updateTotal(){
@@ -102,7 +130,6 @@ function sendEmail(){
 	var email = "ericleslie4@gmail.com";
 	var subj = "Willowbrook Honey Order";
 	var body = "Name: " + document.getElementById("name").value + "\nPhone: " + document.getElementById("phone").value;
-	body += "\nWhen: " + (document.getElementById("ASAP").checked ? "ASAP" : "Next Season");
 	body += "\nExtra Information: " + document.getElementById("extraInfo").value;
 	body += "\n\nGallons @ $" + inven[0][0] + " each: " + document.getElementById("gallon").value;
 	body += "\n1LB @ $" + inven[1][0] + " each: " + document.getElementById("1lb").value;
