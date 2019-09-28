@@ -12,38 +12,36 @@
 <div class="bar"></div>
 
 <a href="index.html">
-<font id="logo" class="logo highlight" face="Arial Black"> Willowbrook Honey </font>
+<img class="logo" src="media/wbhLogo.png">
 </a>
 
 <span class="nav_bar" style="display:inline-block;">
 	<a class="nav_button highlight" href="honey.html"> Honey </a>
 	<a class="nav_button highlight" href="bees.html"> Bees </a>
-	<a class="nav_button highlight" href="learn.html"> Learn </a>
 </span>
 
 <div class="content" align="left">
 
 <div class="header"> <u> Honey Products </u> </div>
 
+Super Sweet Pure Raw Local Honey from either wildflower and black locust tree blossoms or orchard berry (blueberry, strawberry, and blackberry) blossoms.
+<br>
+<img src="media/inventory.jpg" alt="Honey" style="width:30%;">
+<br>
+
 <span class="item">
 <img src="media/honey.png" alt="Honey" style="width:100px;">
 <br> Honey Pound
-<div class="desc">
-Information Information Information Information Information Information
-</div>
-1LB $<span id="1lbPrice"></span> :
+2LB $<span id="1lbPrice"></span> :
 <input type="number" id="1lb" value="0" min="0" onchange="updateTotal()">
 <br>
-1/2LB $<span id="halflbPrice"></span> :
+1LB $<span id="halflbPrice"></span> :
 <input type="number" id="halflb" value="0" min="0" onchange="updateTotal()"><br>
 </span>
 
 <span class="item">
 <img src="media/honeycomb.png" alt="Honey Comb" style="width:88px;">
 <br> Comb Honey
-<div class="desc">
-Information Information Information Information Information Information
-</div>
 $<span id="combPrice"></span> :
 <input type="number" id="comb" value="0" min="0" onchange="updateTotal()">
 </span>
@@ -51,9 +49,6 @@ $<span id="combPrice"></span> :
 <span class="item">
 <img src="media/cream.png" alt="Cream Honey" style="width:125px;">
 <br> Creamed Honey
-<div class="desc">
-Information Information Information Information Information Information
-</div>
 $<span id="creamedPrice"></span> :
 <input type="number" id="creamed" value="0" min="0" onchange="updateTotal()">
 </span>
@@ -61,9 +56,6 @@ $<span id="creamedPrice"></span> :
 <span class="item">
 <img src="media/gallon.png" alt="Honey Gallon" style="width:125px;">
 <br> Honey Gallon
-<div class="desc">
-Information Information Information Information Information Information
-</div>
 $<span id="gallonPrice"></span> :
 <input type="number" id="gallon" value="0" min="0" onchange="updateTotal()">
 </span>
@@ -132,8 +124,8 @@ function sendEmail(){
 	var body = "Name: " + document.getElementById("name").value + "\nPhone: " + document.getElementById("phone").value;
 	body += "\nExtra Information: " + document.getElementById("extraInfo").value;
 	body += "\n\nGallons @ $" + inven[0][0] + " each: " + document.getElementById("gallon").value;
-	body += "\n1LB @ $" + inven[1][0] + " each: " + document.getElementById("1lb").value;
-	body += "\n1/2 LB @ $" + inven[2][0] + " each: " + document.getElementById("halflb").value;
+	body += "\n2LB @ $" + inven[1][0] + " each: " + document.getElementById("1lb").value;
+	body += "\n1 LB @ $" + inven[2][0] + " each: " + document.getElementById("halflb").value;
 	body += "\nComb Honey @ $" + inven[3][0] + " each: " + document.getElementById("comb").value;
 	body += "\nCreamed Honey @ $" + inven[4][0] + " each: " + document.getElementById("creamed").value;
 	body += "\n\nTotal: $" + document.getElementById("price").innerHTML;

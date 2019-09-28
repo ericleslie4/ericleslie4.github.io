@@ -24,11 +24,13 @@ a {
 }
 
 .logo {
-	position: relative;
-	padding: 12;
+	position: fixed;
+	padding: 0;
 	font-size: 5vh;
 	text-shadow: -5px 3px #87871e;
 	color: #ccbe27;
+	height: 160px;
+	z-index:1;
 }
 
 .combs {
@@ -88,11 +90,13 @@ a {
     text-decoration: none;
     font-weight: bold;
     font-size: 2.8vh;
-    padding-left: 5vw;
+    padding-left: 9vw;
     
 }
 
 .nav_bar {
 	position: relative;
 	margin-left: 3vw;
+	padding-top: 100px;
+	padding-left: 10vw;
 }
