@@ -24,15 +24,20 @@
 
 <div class="header"> <u> Honey Products </u> </div>
 
+<br><br>
+<span style="display:inline-block;width:100vw;">
+<img src="media/inventory.jpg" alt="Honey" style="height:220px;float:left;">
+<span style="display: block;padding-top:60px;max-width:900px;">
 Super Sweet Pure Raw Local Honey from either wildflower and black locust tree blossoms or orchard berry (blueberry, strawberry, and blackberry) blossoms.
+</span>
 <br>
-<img src="media/inventory.jpg" alt="Honey" style="width:30%;">
-<br>
+</span>
 
 <span class="item">
 <img src="media/honey.png" alt="Honey" style="width:100px;">
-<br> Honey Pound
-2LB $<span id="1lbPrice"></span> :
+<br> Honey
+<br> 2LB
+$<span id="1lbPrice"></span> :
 <input type="number" id="1lb" value="0" min="0" onchange="updateTotal()">
 <br>
 1LB $<span id="halflbPrice"></span> :
@@ -42,20 +47,21 @@ Super Sweet Pure Raw Local Honey from either wildflower and black locust tree bl
 <span class="item">
 <img src="media/honeycomb.png" alt="Honey Comb" style="width:88px;">
 <br> Comb Honey
-$<span id="combPrice"></span> :
+<br>$<span id="combPrice"></span> :
 <input type="number" id="comb" value="0" min="0" onchange="updateTotal()">
 </span>
 
 <span class="item">
 <img src="media/cream.png" alt="Cream Honey" style="width:125px;">
 <br> Creamed Honey
-$<span id="creamedPrice"></span> :
+<br>$<span id="creamedPrice"></span>:
 <input type="number" id="creamed" value="0" min="0" onchange="updateTotal()">
 </span>
 
 <span class="item">
 <img src="media/gallon.png" alt="Honey Gallon" style="width:125px;">
-<br> Honey Gallon
+<br> Honey
+<br> Gallon
 $<span id="gallonPrice"></span> :
 <input type="number" id="gallon" value="0" min="0" onchange="updateTotal()">
 </span>
@@ -95,7 +101,7 @@ $.ajax({
     },
     dataType: "text",
     });
-	
+
 function changeText(id, text){
 	document.getElementById(id).innerHTML = text;
 }
@@ -119,7 +125,7 @@ function updateTotal(){
 }
 
 function sendEmail(){
-	var email = "ericleslie4@gmail.com";
+	var email = "lovewillowbrookhoney@gmail.com";
 	var subj = "Willowbrook Honey Order";
 	var body = "Name: " + document.getElementById("name").value + "\nPhone: " + document.getElementById("phone").value;
 	body += "\nExtra Information: " + document.getElementById("extraInfo").value;

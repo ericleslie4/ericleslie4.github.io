@@ -32,9 +32,6 @@
 <br>
 
 <div style="text-align:center" id="dot_elem">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
 <br>
@@ -42,18 +39,24 @@
 Willowbrook Honey
 <span style="color:#dede02;">
 is a local family beekeeping business in Terre Haute, Indiana owned and operated by brothers Eric and Mark Ellis.
-They have been selling honey for 8 years. Follow us on Instagram @willowbrookhoney2012 
-If you are interested in ordering please visit the Honey page.
+They have been selling honey for 8 years.
+<br>
+<br> Follow us on Instagram <a href="https://www.instagram.com/willowbrookhoney2012/" style="color:#ffbf00;"> @willowbrookhoney2012 </a>
+<br> If you are interested in ordering please visit the <a href="honey.html" style="color:#ffbf00;"> Honey </a> page.
 <br> <br>
 Willowbrook Honey will be setting up shop at these great local festivals for 2020:
+<br>
 <span style="color:#75dbeb;">
 <br> Berry Bash - July 11th <br> <img src="media/home/berryBashEvent.jpg" style="width:300px;">
+<br>
 <br> Apple Fest - September 26th <br> <img src="media/home/appleFestEvent.jpg" style="width:300px;">
 </span>
 <br> <br>
 Contact: <br>
+<span style="color:#ffbf00;">
 (812) 240-4257 <br>
 lovewillowbrookhoney@gmail.com
+</span>
 </span>
 </div>
 </div>
@@ -99,15 +102,15 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
+  if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
+      slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block"; 
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
 

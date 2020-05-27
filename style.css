@@ -24,7 +24,7 @@ a {
 }
 
 .logo {
-	position: fixed;
+	position: relative;
 	padding: 0;
 	font-size: 5vh;
 	text-shadow: -5px 3px #87871e;
@@ -46,7 +46,7 @@ a {
 	color: #e6d630;
 }
 
-.bar {	
+.bar {
 	position: fixed;
 	top: 50;
 	left: 81vw;
@@ -71,7 +71,7 @@ a {
 }
 
 .header {
-	
+
     border: none;
     color: #ffff00;
     text-align: left;
@@ -79,19 +79,19 @@ a {
     font-weight: bold;
     font-size: 3.5vh;
     padding: 0.8vw;
-    
+
 }
 
 .nav_button {
-	
+
     border: none;
     color: #ccbe27;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    font-size: 2.8vh;
+    font-size: 3.3vh;
     padding-left: 9vw;
-    
+
 }
 
 .nav_bar {
